@@ -23,19 +23,30 @@ std::vector<std::vector<std::string>> CsvParser::getCsv(std::string filename) {
 };
 
 void CsvParser::printData() {
+    std::cout.flush();
     for (std::vector<std::string> row : this->data) {
-        for (std::string s: row) std::cout << std::setw(12) << s << " " << std::flush;
+        for (std::string s: row) std::cout << std::setw(12) << s << " ";
         std::cout << std::endl;
     }
 };
+
+std::vector<std::vector<std::string>> CsvParser::getData() {
+    return this->data;
+}
 
 std::vector<std::vector<int>> CsvParser::getDataAsInts() {
     std::vector<std::vector<int>> result;
     for (std::vector<std::string> row : this->data) {
         std::vector<int> R;
-        for (std::string s: row) R.push_back(std::stoi(s));
+        for (auto &s : row) {
+            std::stringstream parser(s);
+            int x = 0;
+
+            parser >> x;
+
+            R.push_back(x);
+        }
         result.push_back(R);
     }
     return result;
 };
-

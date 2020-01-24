@@ -24,8 +24,7 @@ int main() {
     csv.printData();
 
     int nRuns = 5;
-    std::vector<std::vector<int>> data = csv.getDataAsInts();
-    EmpericalDwellSimulation sim(nRuns, data);
+    EmpericalDwellSimulation sim(nRuns, csv.getDataAsInts());
 
     return 0;
 };
