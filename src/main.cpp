@@ -20,5 +20,6 @@
 using namespace std;
 
 int main() {
-    CsvParser csv("test_data.csv");
+    CsvParser csv("../tests/test_data.csv");
+    csv.printCsv();
 }
