@@ -1,3 +1,7 @@
+/*
+* Note: I'd like to rewrite the parser to be more reusable (i.e. 
+* abstract read from constructor).
+*/
 #pragma once
 
 #include <iomanip>

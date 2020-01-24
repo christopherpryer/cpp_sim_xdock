@@ -21,7 +21,6 @@ using namespace std;
 
 int main() {
     CsvParser csv("../tests/test_data.csv");
-    csv.printData();
 
     int nRuns = 5;
     EmpericalDwellSimulation sim(nRuns, csv.getDataAsInts());
