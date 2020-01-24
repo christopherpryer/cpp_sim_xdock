@@ -10,7 +10,8 @@ class CsvParser {
     public:
         CsvParser(std::string filename);
 
-        void printCsv();
+        void printData();
+        std::vector<std::vector<int>> getDataAsInts();
 
     private:
         std::vector<std::vector<std::string>> data;

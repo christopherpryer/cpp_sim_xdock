@@ -15,11 +15,17 @@
 * 6. Repeat.
 */
 #include "parser.h"
-#include <iostream>
+#include "sim.h"
 
 using namespace std;
 
 int main() {
     CsvParser csv("../tests/test_data.csv");
-    csv.printCsv();
-}
+    csv.printData();
+
+    int nRuns = 5;
+    std::vector<std::vector<int>> data = csv.getDataAsInts();
+    EmpericalDwellSimulation sim(nRuns, data);
+
+    return 0;
+};
