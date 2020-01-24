@@ -41,5 +41,7 @@ int main() {
         trucks.push_back(truck);
     }
 
+    sim.setEnvironment(xDock, trucks);
+
     return 0;
 };

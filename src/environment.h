@@ -1,5 +1,7 @@
 #pragma once
 
+#include <iostream>
+
 class CrossDock {
 
     public:
@@ -8,7 +10,10 @@ class CrossDock {
     private:
         int nDwells;
         int nWorkers;
-        int nDoors;;
+        int nDoors;
+
+    public:
+        void printCrossDock();
 };
 
 // might just want to make this a struct.
