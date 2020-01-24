@@ -5,3 +5,8 @@ EmpericalDwellSimulation::EmpericalDwellSimulation(int nRuns, std::vector<std::v
     this->data = data;
     std::cout << "EmpericalDwellSimulation initialized with " << this->data.size() << " rows" << std::endl;
 };
+
+void EmpericalDwellSimulation::setEnvironment(CrossDock xDock, std::vector<Truck> trucks) {
+    this->xDock = xDock;
+    this->trucks = trucks;
+};

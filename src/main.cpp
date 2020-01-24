@@ -16,6 +16,7 @@
 */
 #include "parser.h"
 #include "sim.h"
+#include "environment.h"
 
 using namespace std;
 
@@ -23,7 +24,22 @@ int main() {
     CsvParser csv("../tests/test_data.csv");
 
     int nRuns = 5;
+    int maxTruckWeight = 45000;
+    int maxTruckCube = 3000;
+
     EmpericalDwellSimulation sim(nRuns, csv.getDataAsInts());
+    
+    int nDwells = 10;
+    int nWorkers = 10;
+    int nDoors = 10;
+    CrossDock xDock(nDwells, nWorkers, nDoors);
+
+    int nTrucks = 10;
+    std::vector<Truck> trucks;
+    for (unsigned int i = 0; i < nTrucks; i++) {
+        Truck truck(maxTruckWeight, maxTruckCube);
+        trucks.push_back(truck);
+    }
 
     return 0;
 };

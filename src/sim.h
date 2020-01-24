@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <vector>
+#include "environment.h"
 
 class EmpericalDwellSimulation {
 
@@ -11,6 +12,9 @@ class EmpericalDwellSimulation {
     private:
         int nRuns;
         std::vector<std::vector<int>> data;
+        CrossDock xDock { CrossDock(0, 0, 0) };
+        std::vector<Truck> trucks;
 
-        void printInitialization();
+    public:
+        void setEnvironment(CrossDock xDock, std::vector<Truck> trucks);
 };
