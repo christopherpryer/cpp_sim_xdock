@@ -15,7 +15,10 @@
 * 6. Repeat.
 */
 #include "parser.h"
+#include <iostream>
+
+using namespace std;
 
 int main() {
-    CSVParser parser;
+    CsvParser csv("test_data.csv");
 }
