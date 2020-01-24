@@ -1,2 +1,2 @@
-# cpp_sim_xdock
-Cross-dock simulation ported from python to c++.
+# cpp_xdock_sim
+Cross-dock simulation ported form python to c++.
