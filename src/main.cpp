@@ -14,6 +14,8 @@
 * 5. Load trucks.
 * 6. Repeat.
 */
+#include "parser.h"
+
 int main() {
-    
+    CSVParser parser;
 }
