@@ -15,6 +15,8 @@ class EmpericalDwellSimulation {
         CrossDock xDock { CrossDock(0, 0, 0) };
         std::vector<Truck> trucks;
 
+        std::vector<int> calcualteTimeDeltas(); // TODO: as floats (dwells are currently ints).
+
     public:
         void setEnvironment(CrossDock xDock, std::vector<Truck> trucks);
 };

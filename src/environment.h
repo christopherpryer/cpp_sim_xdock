@@ -14,6 +14,7 @@ class CrossDock {
 
     public:
         void printCrossDock();
+        int getNumDwells();
 };
 
 // might just want to make this a struct.

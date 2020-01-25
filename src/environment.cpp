@@ -11,6 +11,10 @@ void CrossDock::printCrossDock() {
     std::cout << "CrossDock dwells(" << this->nDwells << ") nWorkers(" << this->nWorkers << ") nDoors(" << this->nDoors << ")" << std::endl;
 };
 
+int CrossDock::getNumDwells() {
+    return this->nDwells;
+};
+
 Truck::Truck(int maxWeight, int maxCube) {
     this->maxWeight = maxWeight;
     this->maxCube = maxCube;
