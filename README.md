@@ -1,4 +1,4 @@
-# cpp_xdock_sim
+# cpp_sim_xdock
 Cross-dock simulation ported form python to c++.
 
 ## Build & Run Instructions (cygwin)

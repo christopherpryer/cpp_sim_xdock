@@ -23,7 +23,6 @@ std::vector<std::vector<std::string>> CsvParser::getCsv(std::string filename) {
 };
 
 void CsvParser::printData() {
-    std::cout.flush();
     for (std::vector<std::string> row : this->data) {
         for (std::string s: row) std::cout << std::setw(12) << s << " ";
         std::cout << std::endl;
