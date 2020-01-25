@@ -8,4 +8,4 @@ Cross-dock simulation ported form python to c++.
 3. ```cmake ../src```
 4. ```cmake --build```
 5. ```cd ../bin```
-6. ```cmd /c main.exe``
+6. ```cmd /c main.exe```
