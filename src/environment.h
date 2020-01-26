@@ -1,6 +1,7 @@
 #pragma once
 
 #include <iostream>
+#include <vector>
 
 class CrossDock {
 
@@ -25,4 +26,13 @@ class Truck {
         
         int maxWeight;
         int maxCube;
+};
+
+class Shipment {
+
+    public:
+        Shipment(std::vector<int> dwells);
+
+    private:
+        std::vector<int> dwells;
 };

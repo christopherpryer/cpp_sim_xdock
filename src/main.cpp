@@ -13,6 +13,10 @@
 * 4. Simulate dwell times.
 * 5. Load trucks.
 * 6. Repeat.
+*
+* NOTE:
+* Would like to implement proper pointers and references in the next
+* refactor & optimization.
 */
 #include "parser.h"
 #include "sim.h"
@@ -41,7 +45,13 @@ int main() {
         trucks.push_back(truck);
     }
 
-    sim.setEnvironment(xDock, trucks);
+    std::vector<Shipment> shipments;
+    for (unsigned int i = 0; i < sim.getData().size(); i++) {
+        Shipment shipment(sim.getData().at(i));
+        shipments.push_back(shipment);
+    }
+
+    sim.setEnvironment(xDock, trucks, shipments);
 
     return 0;
 };

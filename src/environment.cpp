@@ -19,3 +19,7 @@ Truck::Truck(int maxWeight, int maxCube) {
     this->maxWeight = maxWeight;
     this->maxCube = maxCube;
 };
+
+Shipment::Shipment(std::vector<int> dwells) {
+    this->dwells = dwells;
+};

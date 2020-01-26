@@ -6,8 +6,9 @@ EmpericalDwellSimulation::EmpericalDwellSimulation(int nRuns, std::vector<std::v
     std::cout << "EmpericalDwellSimulation initialized with " << this->data.size() << " rows" << std::endl;
 };
 
-void EmpericalDwellSimulation::setEnvironment(CrossDock xDock, std::vector<Truck> trucks) {
+void EmpericalDwellSimulation::setEnvironment(CrossDock xDock, std::vector<Truck> trucks, std::vector<Shipment> shipments) {
     this->xDock = xDock;
+    this->shipments = shipments;
     this->trucks = trucks;
     this->xDock.printCrossDock();
     std::cout << "EmpericalDwellSimulation configured with " << this->trucks.size() << " Trucks" << std::endl;
@@ -23,4 +24,8 @@ std::vector<int> EmpericalDwellSimulation::calcualteTimeDeltas() {
         sums.push_back(sum);
     }
     return sums;
+};
+
+std::vector<std::vector<int>> EmpericalDwellSimulation::getData() {
+    return this->data;
 };
