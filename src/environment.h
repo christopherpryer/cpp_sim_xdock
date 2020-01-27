@@ -18,16 +18,6 @@ class CrossDock {
         int getNumDwells();
 };
 
-// might just want to make this a struct.
-class Truck {
-
-    public:
-        Truck(int maxWeight, int maxCube);
-        
-        int maxWeight;
-        int maxCube;
-};
-
 class Shipment {
 
     public:
@@ -35,4 +25,20 @@ class Shipment {
 
     private:
         std::vector<int> dwells;
+};
+
+// might just want to make this a struct.
+class Truck {
+
+    public:
+        Truck(int maxWeight, int maxCube);
+
+    private:
+        std::vector<Shipment> shipments;
+
+    public: 
+        int maxWeight;
+        int maxCube;
+
+        void loadShipments(std::vector<Shipment> shipments);
 };

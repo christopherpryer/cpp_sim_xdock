@@ -15,11 +15,15 @@ int CrossDock::getNumDwells() {
     return this->nDwells;
 };
 
+Shipment::Shipment(std::vector<int> dwells) {
+    this->dwells = dwells;
+};
+
 Truck::Truck(int maxWeight, int maxCube) {
     this->maxWeight = maxWeight;
     this->maxCube = maxCube;
 };
 
-Shipment::Shipment(std::vector<int> dwells) {
-    this->dwells = dwells;
+void Truck::loadShipments(std::vector<Shipment> shipments) {
+    this->shipments = shipments; // this will create a copy (use pointers/ref).
 };

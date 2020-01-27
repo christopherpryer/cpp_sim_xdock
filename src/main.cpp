@@ -16,7 +16,8 @@
 *
 * NOTE:
 * Would like to implement proper pointers and references in the next
-* refactor & optimization.
+* refactor & optimization. I'll start out with assuming that the dwell
+* simulation 
 */
 #include "parser.h"
 #include "sim.h"
@@ -52,6 +53,8 @@ int main() {
     }
 
     sim.setEnvironment(xDock, trucks, shipments);
+    sim.generateNewDwells();
+    sim.loadTrucks();
 
     return 0;
 };
