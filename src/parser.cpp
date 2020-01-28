@@ -2,7 +2,8 @@
 
 CsvParser::CsvParser(std::string filename) {
     this->data = this->getCsv(filename);
-    std::cout << "CsvParser parsed " << this->data.size() << " rows" << std::endl;
+    if (this->data.size() > 0)
+        std::cout << "CsvParser parsed " << this->data.size() << " rows" << std::endl;
 };
 
 std::vector<std::vector<std::string>> CsvParser::getCsv(std::string filename) {

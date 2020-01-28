@@ -32,7 +32,10 @@ int main() {
     int maxTruckWeight = 45000;
     int maxTruckCube = 3000;
 
-    EmpericalDwellSimulation sim(nRuns, csv.getDataAsInts());
+    std::vector<std::vector<int>> processedData = csv.getDataAsInts();
+    EmpericalDwellSimulation sim(nRuns, &processedData);
+    CsvParser *pobj = new CsvParser("");
+    delete pobj;
     
     int nDwells = 10;
     int nWorkers = 10;

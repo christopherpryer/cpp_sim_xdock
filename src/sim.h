@@ -7,7 +7,7 @@
 class EmpericalDwellSimulation {
 
     public:
-        EmpericalDwellSimulation(int nRuns, std::vector<std::vector<int>> data);
+        EmpericalDwellSimulation(int nRuns, std::vector<std::vector<int>> * data);
 
     private:
         int nRuns;
