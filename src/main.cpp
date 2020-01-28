@@ -26,15 +26,15 @@
 using namespace std;
 
 int main() {
-    CsvParser csv("../tests/test_data.csv");
+    CsvParser *pobj = new CsvParser("../tests/test_data.csv");
 
     int nRuns = 5;
     int maxTruckWeight = 45000;
     int maxTruckCube = 3000;
 
-    std::vector<std::vector<int>> processedData = csv.getDataAsInts();
+    std::vector<std::vector<int>> processedData = pobj->getDataAsInts();
     EmpericalDwellSimulation sim(nRuns, &processedData);
-    CsvParser *pobj = new CsvParser("");
+    
     delete pobj;
     
     int nDwells = 10;
