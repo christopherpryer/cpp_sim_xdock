@@ -53,8 +53,6 @@ int main() {
     }
 
     sim.setEnvironment(xDock, trucks, shipments);
-    sim.generateNewDwells();
-    sim.loadTrucks();
 
     return 0;
 };

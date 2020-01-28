@@ -18,10 +18,9 @@ class EmpericalDwellSimulation {
         bool envConfigured { false };  
         
         std::vector<int> calcualteTimeDeltas(); // TODO: as floats (dwells are currently ints).
+        int generateNewDwell(std::vector<int> pool);
 
     public:
         void setEnvironment(CrossDock xDock, std::vector<Truck> trucks, std::vector<Shipment> shipments);
         std::vector<std::vector<int>> getData();
-        void generateNewDwells();
-        void loadTrucks();
 };

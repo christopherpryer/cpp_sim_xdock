@@ -15,8 +15,10 @@ void EmpericalDwellSimulation::setEnvironment(CrossDock xDock, std::vector<Truck
     std::cout << "EmpericalDwellSimulation configured with " << this->trucks.size() << " Trucks" << std::endl;
 };
 
-void EmpericalDwellSimulation::generateNewDwells() {
-    // TODO: ...
+int EmpericalDwellSimulation::generateNewDwell(std::vector<int> pool) {
+    // randomly select a value from the vector that's passed.
+    int index = std::rand() % (pool.size() - 1);
+    return pool.at(index);
 };
 
 std::vector<int> EmpericalDwellSimulation::calcualteTimeDeltas() {
@@ -29,14 +31,6 @@ std::vector<int> EmpericalDwellSimulation::calcualteTimeDeltas() {
         sums.push_back(sum);
     }
     return sums;
-};
-
-void EmpericalDwellSimulation::loadTrucks() {
-    if (this->envConfigured) {
-        for (Truck &t : this->trucks){
-            // TODO: ...
-        }
-    }
 };
 
 std::vector<std::vector<int>> EmpericalDwellSimulation::getData() {
