@@ -52,7 +52,6 @@ int main() {
     std::vector<Shipment> shipments;
     int n = processedData.size();
     for (unsigned int i = 0; i < n; i++) {
-        std::cout << i << std::endl;
         Shipment shipment(processedData.at(i));
         shipments.push_back(shipment);
     }
